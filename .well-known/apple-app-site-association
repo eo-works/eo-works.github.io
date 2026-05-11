@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["WA6PY6NL25.com.eo.habit-streak"],
+        "components": [
+          { "/": "/test/*" }
+        ]
+      }
+    ]
+  }
+}
