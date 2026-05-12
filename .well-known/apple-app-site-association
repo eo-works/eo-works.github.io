@@ -4,7 +4,10 @@
       {
         "appIDs": ["WA6PY6NL25.com.eo.habit-streak"],
         "components": [
-          { "/": "/test/*" }
+          { "/": "/test/*" },
+          { "/": "/book/*" },
+          { "/": "/settings" },
+          { "/": "/debug" }
         ]
       }
     ]
