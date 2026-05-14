@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Read Streak — Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px;
+      margin: 2rem auto;
+      padding: 0 1.25rem 4rem;
+      line-height: 1.55;
+      color: #222;
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 0.25rem; }
+    h2 { margin-top: 2rem; font-size: 1.2rem; border-bottom: 1px solid #eee; padding-bottom: 0.25rem; }
+    em { color: #777; font-style: normal; font-size: 0.9rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem 0.6rem; text-align: left; vertical-align: top; }
+    th { background: #f6f6f6; }
+    code { background: #f3f3f3; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.88em; }
+    a { color: #0066cc; }
+    ul { padding-left: 1.4rem; }
+  </style>
+</head>
+<body>
+
+<h1>Read Streak — Privacy Policy</h1>
+<p><em>Last updated: 2026-05-14.</em></p>
+
+<p>This policy describes how Read Streak (&quot;the App&quot;) handles user data. The App is published as a verification companion for an Apple App Transfer; the user-facing functionality is a real reading streak tracker, and data collection is configured to support that scenario.</p>
+
+<h2>What we collect</h2>
+
+<table>
+  <thead>
+    <tr><th>Data</th><th>Purpose</th><th>Where it's stored</th><th>Third parties</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sign in with Apple identifier (<code>sub</code>, <code>transfer_sub</code> if present)</td>
+      <td>Account sign-in and Apple App Transfer migration handling</td>
+      <td>On device (<code>UserDefaults.standard</code>); transmitted to Supabase Auth backend</td>
+      <td>Apple, Supabase</td>
+    </tr>
+    <tr>
+      <td>Book list + reading sessions (title, author, emoji, session start/end, current page, total pages)</td>
+      <td>Core feature — display today's reading time and streaks; sync across devices</td>
+      <td>On device (App Group container) + mirrored to Supabase (<code>public.books</code>, <code>public.reading_sessions</code>)</td>
+      <td>Supabase</td>
+    </tr>
+    <tr>
+      <td>Daily reading minimum setting</td>
+      <td>Cross-device sync of user preference</td>
+      <td>On device + mirrored to Supabase (<code>public.users.streak_threshold_minutes</code>)</td>
+      <td>Supabase</td>
+    </tr>
+    <tr>
+      <td>Authentication tokens (access + refresh)</td>
+      <td>Keep the user signed in</td>
+      <td>On device only (App Group <code>.widget</code> UserDefaults + standard UserDefaults)</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Push notification token (APNs / FCM)</td>
+      <td>Deliver daily reading reminders</td>
+      <td>On device + relayed to Firebase Cloud Messaging</td>
+      <td>Firebase</td>
+    </tr>
+    <tr>
+      <td>App usage events (sign-in, book creation, session start/end, deep link opens)</td>
+      <td>Product analytics</td>
+      <td>Aggregated by analytics vendor</td>
+      <td>Firebase Analytics</td>
+    </tr>
+    <tr>
+      <td>Crash reports</td>
+      <td>Reliability monitoring</td>
+      <td>Aggregated by Firebase Crashlytics</td>
+      <td>Firebase</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>What we do NOT collect</h2>
+<ul>
+  <li>Precise or background location</li>
+  <li>Contacts, photos, microphone, or camera</li>
+  <li>Health, fitness, or biometric data</li>
+  <li>Payment or financial information</li>
+  <li>Advertising / attribution identifiers (no third-party tracking SDKs are integrated)</li>
+</ul>
+
+<h2>Children</h2>
+<p>The App is not directed at children under 13. We do not knowingly collect data from children under 13. If you believe we have collected such data, please contact us so it can be deleted.</p>
+
+<h2>Data retention and deletion</h2>
+<ul>
+  <li>On-device data (book list, reading sessions, tokens) is removed when you sign out or delete the app.</li>
+  <li>Server-side data held by Supabase and analytics vendors follows each vendor's standard retention.</li>
+  <li>Account deletion: contact us with the email associated with your sign-in.</li>
+</ul>
+
+<h2>Vendors and links to their policies</h2>
+<ul>
+  <li>Apple — <a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
+  <li>Firebase / Google — <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+  <li>Supabase — <a href="https://supabase.com/privacy">https://supabase.com/privacy</a></li>
+</ul>
+
+<h2>Contact</h2>
+<p>For privacy questions, account deletion requests, or any other concerns about how your data is handled, please contact: <code>skkimeo+works@gmail.com</code>.</p>
+
+</body>
+</html>
